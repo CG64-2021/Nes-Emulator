@@ -775,7 +775,7 @@ void DEX(cpu_t* cpu)
 
 void DEY(cpu_t* cpu)
 {
-	cpu->register_y;
+	cpu->register_y--;
 	cpu->status = !cpu->register_y ? cpu->status|Z : cpu->status;
 	cpu->status = (cpu->register_y&N) ? cpu->status|N : cpu->status;
 }
